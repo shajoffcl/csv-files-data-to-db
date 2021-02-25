@@ -10,7 +10,7 @@ const mimeFilter = (req, file, cb) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "resources/uploads");
+    cb(null, "resources/");
   },
   filename: function (req, file, cb) {
     cb(null, file.fieldname + "-" + Date.now());
